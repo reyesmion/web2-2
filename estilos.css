@@ -1,0 +1,76 @@
+/* Estilos base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; font-family: Arial, Helvetica, sans-serif; color: #222; }
+body { line-height: 1.4; display: flex; flex-direction: column; }
+
+/* Cabecera y pie */
+header { background: rgba(255,255,255,0.85); padding: 1rem; text-align: center; }
+header h1 { margin: 0; font-size: 1.6rem; color: #111; }
+footer { background: rgba(255,255,255,0.85); padding: 0.75rem; text-align: center; margin-top: auto; }
+
+/* Menú principal y submenús */
+.menu { --bg: rgba(0,0,0,0.65); --bg-sub: rgba(0,0,0,0.9); font-family: inherit; }
+.menu .menu-toggle {
+  display: none;
+  background: var(--bg);
+  color: #fff;
+  border: 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0.5rem;
+  border-radius: 4px;
+}
+.menu ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 0; background: var(--bg); align-items: center; }
+.menu li { position: relative; }
+.menu a { display: block; padding: 0.6rem 1rem; color: #fff; text-decoration: none; }
+.menu a:hover, .menu a:focus { background: rgba(255,255,255,0.06); }
+.menu .submenu-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.55rem;
+  cursor: pointer;
+}
+
+/* Submenu (desktop) */
+.menu .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--bg-sub);
+  min-width: 220px;
+  border-radius: 4px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+.menu .submenu li { display: block; }
+.menu .submenu a { padding: 0.5rem 0.9rem; }
+
+/* Mostrar submenu en hover (desktop) */
+@media (min-width: 721px) {
+  .menu li:hover > .submenu { display: block; }
+  .menu .submenu-toggle { display: none; }
+}
+
+/* Estado abierto (por JS en móvil) */
+.menu li.open > .submenu { display: block; }
+
+/* Responsive: móvil */
+@media (max-width: 720px) {
+  .menu .menu-toggle { display: inline-block; }
+  .menu ul { flex-direction: column; display: none; width: 100%; }
+  .menu.open ul { display: flex; }
+  .menu .submenu { position: static; width: 100%; box-shadow: none; border-radius: 0; }
+  .menu .submenu-toggle { display: inline-block; margin-left: 0.25rem; }
+  .menu a { padding: 0.8rem 1rem; border-top: 1px solid rgba(255,255,255,0.03); }
+}
+
+/* pequeño caret visual */
+.menu .has-children > a::after { content: " ▾"; margin-left: 0.25rem; color: #fff; }
+
+/* Contenido principal */
+main { padding: 1rem; background: rgba(255,255,255,0.85); margin: 1rem; border-radius: 6px; }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZAPATERÍA BICENTENARIO</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="icon" type="image/x-icon" href="imagenes/logo2.png">
+</head>
+<body style="background-image:url('imagenes/fondo.webp'); background-size:cover; background-repeat:no-repeat; background-position:center;">
+  <header>
+    <h1>ZAPATERÍA BICENTENARIO</h1>
+  </header>
+
+  <nav class="menu" aria-label="Menú principal">
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">☰ Menú</button>
+    <ul id="main-menu">
+      <li><a href="index.html">Inicio</a></li>
+
+      <li class="has-children">
+        <a href="nosotros.html">Nosotros</a>
+        <button class="submenu-toggle" aria-expanded="false" aria-label="Abrir submenu Nosotros"></button>
+        <ul class="submenu">
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="mision.html">Misión</a></li>
+          <li><a href="objetivos.html">Objetivos</a></li>
+        </ul>
+      </li>
+
+      <li class="has-children">
+        <a href="todo_acerca_del_zapato.html">Todo acerca del zapato</a>
+        <button class="submenu-toggle" aria-expanded="false" aria-label="Abrir submenu Todo acerca del zapato"></button>
+        <ul class="submenu">
+          <li><a href="mundo_del_zapato.html">Mundo del zapato</a></li>
+          <li><a href="medidas_y_el_pie.html">Medidas y el pie</a></li>
+          <li><a href="el_buen_zapato.html">El buen zapato</a></li>
+          <li><a href="hormas.html">Hormas</a></li>
+          <li><a href="numeracion_del_zapato.html">Numeración del zapato</a></li>
+          <li><a href="cuidado_del_zapato.html">Cuidado del zapato</a></li>
+          <li><a href="como_se_hace_un_zapato.html">Cómo se hace un zapato</a></li>
+        </ul>
+      </li>
+
+      <li class="has-children">
+        <a href="catalogo.html">Catálogo</a>
+        <button class="submenu-toggle" aria-expanded="false" aria-label="Abrir submenu Catálogo"></button>
+        <ul class="submenu">
+          <li><a href="zapatos_deportivos.html">Zapatos deportivos</a></li>
+          <li><a href="zapatos_para_dama.html">Zapatos para dama</a></li>
+        </ul>
+      </li>
+
+      <li class="has-children">
+        <a href="distribuidores.html">Distribuidores</a>
+        <button class="submenu-toggle" aria-expanded="false" aria-label="Abrir submenu Distribuidores"></button>
+        <ul class="submenu">
+          <li><a href="distribuidores.html">Distribuidores</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <section align="center">
+      <h2>Bienvenido</h2>
+      <p>En Zapatería Bicentenario, nos dedicamos a ofrecer una amplia gama de zapatos de alta calidad para todos los gustos y necesidades. Desde zapatos deportivos hasta elegantes modelos para dama, nuestro objetivo es brindar comodidad y estilo a nuestros clientes.</p>
+      <p>Explora nuestro catálogo y descubre la variedad de productos que tenemos para ti.</p>
+      <br><img src="imagenes/zap.png" alt="Zapatería Bicentenario" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;">
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="mailto:webmaster@zapbicen.com.mx">webmaster@zapbicen.com.mx</a></p>
+  </footer>
+
+  <script src="menu.js"></script>
+</body>
+</html>
